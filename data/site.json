@@ -1,19 +1,18 @@
 {
   "name": "Unita Hospital",
-  "tagline": "Quality Healthcare in Ikotun, Lagos",
+  "tagline": "Quality Healthcare in Lagos",
   "description": "Providing comprehensive healthcare services with compassion and excellence.",
   "nav": [
     { "label": "Home", "to": "/" },
     { "label": "About Us", "to": "/about" },
     { "label": "Services", "to": "/services" },
-    { "label": "Medical Team", "to": "/medical-team" },
     { "label": "Partners", "to": "/partners" },
     { "label": "Insurance", "to": "/insurance" },
     { "label": "Contact", "to": "/contact" }
   ],
   "home": {
     "hero": {
-      "title": "Quality Healthcare in Ikotun, Lagos",
+      "title": "Quality Healthcare in , Lagos",
       "subtitle": "Your trusted community hospital providing comprehensive healthcare services with compassion and excellence",
       "primaryCta": "Book Appointment",
       "secondaryCta": "Our Services",
@@ -24,7 +23,7 @@
       {
         "icon": "📍",
         "title": "Our Location",
-        "description": "63 Oduduwa Street, Ikotun",
+        "description": "63 Oduduwa Street, Ikotun, Lagos",
         "link": "/contact"
       },
       {
@@ -70,17 +69,17 @@
       "id": 4,
       "icon": "❤️",
       "title": "Community Care",
-      "description": "As a trusted community hospital, we are committed to serving Ikotun and surrounding areas with integrity and excellence."
+      "description": "As a trusted community hospital, we are committed to serving  and surrounding areas with integrity and excellence."
     }
   ],
   "whyChooseUsTitle": "Why Choose Unita Hospital",
   "address": {
-    "short": "63 Oduduwa Street, Ikotun",
+    "short": "63 Oduduwa Street, Ikotun, Lagos",
     "lines": [
       "63 Oduduwa Street",
       "Off Governor's Road",
       "By College Bus Stop",
-      "Ikotun, Alimosho",
+      ", Alimosho",
       "Lagos, Nigeria"
     ]
   },
@@ -105,9 +104,9 @@
     "ctaPhone": "08036672587"
   },
   "social": [
-    { "label": "Facebook", "href": "#", "icon": "📘" },
-    { "label": "Twitter", "href": "#", "icon": "🐦" },
-    { "label": "Instagram", "href": "#", "icon": "📷" }
+    { "label": "Facebook", "href": "#", "icon": "facebook" },
+    { "label": "Twitter", "href": "#", "icon": "twitter" },
+    { "label": "Instagram", "href": "#", "icon": "instagram" }
   ],
   "about": {
     "pageHeader": {
@@ -123,7 +122,7 @@
       "commitment": "Our Commitment"
     },
     "story": [
-      "Unita Hospital has been serving the Ikotun community with dedication and excellence in healthcare. Our mission is to provide accessible, quality healthcare services to all members of our community.",
+      "Unita Hospital has been serving the  community with dedication and excellence in healthcare. Our mission is to provide accessible, quality healthcare services to all members of our community.",
       "We combine modern medical facilities with compassionate care, ensuring every patient receives personalized attention from our experienced medical team."
     ],
     "mission": "To deliver exceptional healthcare services with compassion, integrity, and excellence.",
@@ -160,16 +159,16 @@
   },
   "seo": {
     "home": {
-      "title": "Unita Hospital - Quality Healthcare in Ikotun, Lagos",
-      "description": "Unita Hospital provides comprehensive healthcare services in Ikotun, Lagos. We accept major HMO providers and offer emergency services, maternity care, and more."
+      "title": "Unita Hospital - Quality Healthcare in , Lagos",
+      "description": "Unita Hospital provides comprehensive healthcare services in , Lagos. We accept major HMO providers and offer emergency services, maternity care, and more."
     },
     "about": {
       "title": "About Us - Unita Hospital",
-      "description": "Learn about Unita Hospital, our mission, vision, and dedicated medical team serving the Ikotun community in Lagos."
+      "description": "Learn about Unita Hospital, our mission, vision, and dedicated medical team serving the  community in Lagos."
     },
     "contact": {
       "title": "Contact Us - Unita Hospital",
-      "description": "Contact Unita Hospital in Ikotun, Lagos. Call 08036672587 or visit us at 63 Oduduwa Street. Emergency services available 24/7."
+      "description": "Contact Unita Hospital in  Lagos. Call 08036672587 or visit us at 63 Oduduwa Street. Emergency services available 24/7."
     }
   },
   "map": {
