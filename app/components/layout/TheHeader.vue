@@ -1,27 +1,27 @@
-<template>
+﻿<template>
   <header class="site-header" :class="{ 'is-scrolled': isScrolled }">
     <div class="container">
       <div class="header-content">
         <!-- Logo -->
-        <NuxtLink to="/" class="logo">
-          <img src="/images/logo.png" alt="Unita Hospital" />
-          <span class="logo-text">Unita Hospital</span>
+        <NuxtLink to="/" class="logo" :aria-label="site.name">
+          <img src="/images/logo.png" alt="" aria-hidden="true" />
+          <span class="logo-text">{{ site.name }}</span>
         </NuxtLink>
 
         <!-- Desktop Navigation -->
         <nav class="desktop-nav">
-          <NuxtLink to="/">Home</NuxtLink>
-          <NuxtLink to="/about">About Us</NuxtLink>
-          <NuxtLink to="/services">Services</NuxtLink>
-          <NuxtLink to="/medical-team">Medical Team</NuxtLink>
-          <NuxtLink to="/partners">Partners</NuxtLink>
-          <NuxtLink to="/insurance">Insurance</NuxtLink>
-          <NuxtLink to="/contact">Contact</NuxtLink>
+          <NuxtLink
+            v-for="item in navItems"
+            :key="item.to"
+            :to="item.to"
+          >
+            {{ item.label }}
+          </NuxtLink>
         </nav>
 
         <!-- CTA Button -->
-        <BaseButton variant="primary" to="/contact" class="cta-button">
-          Book Appointment
+        <BaseButton variant="primary" :to="cta.link" class="cta-button">
+          {{ cta.label }}
         </BaseButton>
 
         <!-- Mobile Menu Toggle -->
@@ -45,9 +45,16 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import siteData from '~/../data/site.json'
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
+const site = siteData
+const navItems = site.nav
+const cta = {
+  label: site.home.hero.primaryCta,
+  link: site.home.hero.primaryCtaLink
+}
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50

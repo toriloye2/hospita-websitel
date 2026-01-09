@@ -45,13 +45,17 @@
   @include desktop {
     display: flex;
     align-items: center;
-    gap: $spacing-lg;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $spacing-sm $spacing-lg;
+    min-width: 0;
   }
 
   a {
     color: $gray-900;
     font-weight: 500;
     font-size: $font-size-sm;
+    white-space: nowrap;
     transition: color $transition-fast;
     position: relative;
 
@@ -72,5 +76,15 @@
         background: $primary-blue;
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .desktop-nav {
+    gap: $spacing-xs $spacing-md;
+  }
+
+  .desktop-nav a {
+    font-size: $font-size-xs;
   }
 }

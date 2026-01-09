@@ -1,0 +1,127 @@
+{
+  "pageHeader": {
+    "title": "Our Medical Services",
+    "breadcrumb": "Home > Services",
+    "subtitle": "Comprehensive healthcare services for your family"
+  },
+  "seo": {
+    "title": "Our Services - Unita Hospital",
+    "description": "Comprehensive medical services including emergency care, maternity, pediatrics, laboratory, pharmacy, and more at Unita Hospital, Ikotun, Lagos."
+  },
+  "overviewTitle": "Our Services",
+  "overviewCtaLabel": "View All Services",
+  "services": [
+    {
+      "id": 1,
+      "icon": "👨‍⚕️",
+      "title": "General Consultation",
+      "shortDescription": "Comprehensive medical consultations for all ages",
+      "description": "Comprehensive medical consultations for all ages. Our doctors provide thorough examinations and personalized treatment plans.",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "icon": "🚨",
+      "title": "Emergency Services",
+      "shortDescription": "24/7 emergency care for urgent medical situations",
+      "description": "24/7 emergency care for urgent medical situations. Quick response and immediate medical attention when you need it most.",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "icon": "🤱",
+      "title": "Maternity & Childbirth",
+      "shortDescription": "Complete care from pregnancy through delivery",
+      "description": "Complete maternity care from pregnancy through delivery. Safe, supportive environment for mothers and newborns.",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "icon": "👶",
+      "title": "Pediatric Care",
+      "shortDescription": "Specialized healthcare for infants and children",
+      "description": "Specialized healthcare for infants, children, and adolescents. Gentle, child-friendly medical services.",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "icon": "🔬",
+      "title": "Laboratory Services",
+      "shortDescription": "Comprehensive diagnostic testing and analysis",
+      "description": "Comprehensive diagnostic testing and analysis. Fast, accurate results for informed medical decisions.",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "icon": "💊",
+      "title": "Pharmacy",
+      "shortDescription": "Fully stocked pharmacy with essential medications",
+      "description": "Fully stocked pharmacy with essential medications. Convenient access to prescribed and over-the-counter medicines.",
+      "featured": true
+    },
+    {
+      "id": 7,
+      "icon": "⚕️",
+      "title": "Minor Surgery",
+      "shortDescription": "Safe, professional minor surgical procedures",
+      "description": "Safe, professional minor surgical procedures in a sterile environment with experienced medical staff.",
+      "featured": true
+    },
+    {
+      "id": 8,
+      "icon": "🤰",
+      "title": "Antenatal Care",
+      "shortDescription": "Comprehensive prenatal care and monitoring",
+      "description": "Comprehensive prenatal care and monitoring. Regular checkups to ensure healthy pregnancy and development.",
+      "featured": true
+    },
+    {
+      "id": 9,
+      "icon": "👩‍🍼",
+      "title": "Postnatal Care",
+      "description": "Post-delivery care for mothers and babies. Support for recovery and newborn health monitoring.",
+      "featured": false
+    },
+    {
+      "id": 10,
+      "icon": "💉",
+      "title": "Vaccinations",
+      "description": "Essential immunizations for children and adults. Protect your family with recommended vaccines.",
+      "featured": false
+    },
+    {
+      "id": 11,
+      "icon": "📋",
+      "title": "Health Screenings",
+      "description": "Preventive health assessments and early disease detection. Regular screenings for optimal health maintenance.",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "icon": "👨‍👩‍👧‍👦",
+      "title": "Family Planning",
+      "description": "Counseling and services for family planning decisions. Professional guidance on reproductive health.",
+      "featured": false
+    }
+  ],
+  "extendedServices": {
+    "title": "Extended Services Through Our Partners",
+    "description": "In addition to our in-house services, we provide access to specialized care through trusted partners:",
+    "items": [
+      {
+        "icon": "🔬",
+        "title": "Laboratory Services",
+        "description": "Comprehensive diagnostic testing via Biochem Laboratories",
+        "link": "/partners",
+        "linkLabel": "Learn More →"
+      },
+      {
+        "icon": "🦷",
+        "title": "Dental Care",
+        "description": "Professional dental services through our dental partner",
+        "link": "/partners",
+        "linkLabel": "Learn More →"
+      }
+    ]
+  }
+}

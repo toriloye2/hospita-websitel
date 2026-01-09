@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <section class="services-overview">
     <div class="container">
-      <h2>Our Services</h2>
+      <h2>{{ overviewTitle }}</h2>
 
       <div class="services-grid">
         <ServiceCard
@@ -9,13 +9,13 @@
           :key="service.id"
           :icon="service.icon"
           :title="service.title"
-          :description="service.description"
+          :description="service.shortDescription || service.description"
         />
       </div>
 
       <div class="view-all-button">
         <BaseButton variant="primary" to="/services">
-          View All Services →
+          {{ overviewCtaLabel }}
         </BaseButton>
       </div>
     </div>
@@ -23,54 +23,9 @@
 </template>
 
 <script setup>
-const services = [
-  {
-    id: 1,
-    icon: '👨‍⚕️',
-    title: 'General Consultation',
-    description: 'Comprehensive medical consultations for all ages'
-  },
-  {
-    id: 2,
-    icon: '🚨',
-    title: 'Emergency Services',
-    description: '24/7 emergency care for urgent medical situations'
-  },
-  {
-    id: 3,
-    icon: '🤱',
-    title: 'Maternity Care',
-    description: 'Complete care from pregnancy through delivery'
-  },
-  {
-    id: 4,
-    icon: '👶',
-    title: 'Pediatric Care',
-    description: 'Specialized healthcare for infants and children'
-  },
-  {
-    id: 5,
-    icon: '🔬',
-    title: 'Laboratory Services',
-    description: 'Comprehensive diagnostic testing and analysis'
-  },
-  {
-    id: 6,
-    icon: '💊',
-    title: 'Pharmacy',
-    description: 'Fully stocked pharmacy with essential medications'
-  },
-  {
-    id: 7,
-    icon: '⚕️',
-    title: 'Minor Surgery',
-    description: 'Safe, professional minor surgical procedures'
-  },
-  {
-    id: 8,
-    icon: '🤰',
-    title: 'Antenatal Care',
-    description: 'Comprehensive prenatal care and monitoring'
-  }
-]
+import servicesData from '~/../data/services.json'
+
+const services = servicesData.services.filter((service) => service.featured)
+const overviewTitle = servicesData.overviewTitle
+const overviewCtaLabel = servicesData.overviewCtaLabel
 </script>

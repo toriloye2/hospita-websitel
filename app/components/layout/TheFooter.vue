@@ -1,82 +1,78 @@
-<template>
+﻿<template>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <!-- Column 1: Hospital Info -->
         <div class="footer-column">
           <div class="footer-logo">
-            <img src="/images/logo.png" alt="Unita Hospital" />
-            <span>Unita Hospital</span>
+            <img src="/images/logo.png" alt="" aria-hidden="true" />
+            <span>{{ site.name }}</span>
           </div>
           <p class="footer-tagline">
-            Quality Healthcare in Ikotun, Lagos
+            {{ site.tagline }}
           </p>
           <p class="footer-description">
-            Providing comprehensive healthcare services with compassion and excellence.
+            {{ site.description }}
           </p>
         </div>
 
-        <!-- Column 2: Quick Links -->
         <div class="footer-column">
           <h3>Quick Links</h3>
           <ul class="footer-links">
-            <li><NuxtLink to="/">Home</NuxtLink></li>
-            <li><NuxtLink to="/about">About Us</NuxtLink></li>
-            <li><NuxtLink to="/services">Services</NuxtLink></li>
-            <li><NuxtLink to="/medical-team">Medical Team</NuxtLink></li>
-            <li><NuxtLink to="/partners">Partners</NuxtLink></li>
-            <li><NuxtLink to="/insurance">Insurance</NuxtLink></li>
-            <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+            <li v-for="item in navItems" :key="item.to">
+              <NuxtLink :to="item.to">{{ item.label }}</NuxtLink>
+            </li>
           </ul>
         </div>
 
-        <!-- Column 3: Contact Info -->
         <div class="footer-column">
           <h3>Contact Us</h3>
           <div class="contact-info">
             <p>
               <strong>Address:</strong><br>
-              63 Oduduwa Street, Ikotun<br>
-              Alimosho, Lagos, Nigeria
+              <template v-for="(line, index) in site.address.lines" :key="line">
+                {{ line }}<br v-if="index < site.address.lines.length - 1" />
+              </template>
             </p>
             <p>
               <strong>Phone:</strong><br>
-              <a href="tel:08036672587">08036672587</a><br>
-              <a href="tel:08066948982">08066948982</a>
+              <template v-for="(phone, index) in site.contact.phones" :key="phone">
+                <a :href="`tel:${phone}`">{{ phone }}</a><br v-if="index < site.contact.phones.length - 1" />
+              </template>
             </p>
             <p>
               <strong>Email:</strong><br>
-              <a href="mailto:unitahospital@gmail.com">unitahospital@gmail.com</a>
+              <a :href="`mailto:${site.contact.email}`">{{ site.contact.email }}</a>
             </p>
             <p>
               <strong>Hours:</strong><br>
-              Mon-Fri: 8:00 AM - 6:00 PM<br>
-              Emergency: 24/7
+              {{ site.hours.label }}
             </p>
           </div>
         </div>
 
-        <!-- Column 4: Insurance Partners -->
         <div class="footer-column">
           <h3>Insurance Partners</h3>
           <div class="hmo-logos">
-            <div class="hmo-logo">Hygeia HMO</div>
-            <div class="hmo-logo">AIICO Health</div>
-            <div class="hmo-logo">Clearline HMO</div>
-            <div class="hmo-logo">Reliance Health</div>
+            <div v-for="provider in providers" :key="provider.id" class="hmo-logo">
+              {{ provider.name }}
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p class="copyright">
-          &copy; {{ currentYear }} Unita Hospital. All rights reserved.
+          &copy; {{ currentYear }} {{ site.name }}. All rights reserved.
         </p>
         <div class="social-links">
-          <a href="#" aria-label="Facebook">📘</a>
-          <a href="#" aria-label="Twitter">🐦</a>
-          <a href="#" aria-label="Instagram">📷</a>
+          <a
+            v-for="link in socialLinks"
+            :key="link.label"
+            :href="link.href"
+            :aria-label="link.label"
+          >
+            {{ link.icon }}
+          </a>
         </div>
       </div>
     </div>
@@ -84,5 +80,12 @@
 </template>
 
 <script setup>
+import insuranceData from '~/../data/insurance.json'
+import siteData from '~/../data/site.json'
+
+const site = siteData
+const navItems = site.nav
+const providers = insuranceData.providers
+const socialLinks = site.social
 const currentYear = new Date().getFullYear()
 </script>

@@ -1,9 +1,9 @@
-<template>
+﻿<template>
   <div class="mobile-nav" :class="{ 'is-open': isOpen }">
     <div class="mobile-nav-header">
-      <NuxtLink to="/" class="logo" @click="close">
-        <img src="/images/logo.png" alt="Unita Hospital" />
-        <span>Unita Hospital</span>
+      <NuxtLink to="/" class="logo" :aria-label="site.name" @click="close">
+        <img src="/images/logo.png" alt="" aria-hidden="true" />
+        <span>{{ site.name }}</span>
       </NuxtLink>
 
       <button class="close-button" @click="close" aria-label="Close menu">
@@ -12,24 +12,27 @@
     </div>
 
     <nav class="mobile-nav-links">
-      <NuxtLink to="/" @click="close">Home</NuxtLink>
-      <NuxtLink to="/about" @click="close">About Us</NuxtLink>
-      <NuxtLink to="/services" @click="close">Services</NuxtLink>
-      <NuxtLink to="/medical-team" @click="close">Medical Team</NuxtLink>
-      <NuxtLink to="/partners" @click="close">Partners</NuxtLink>
-      <NuxtLink to="/insurance" @click="close">Insurance</NuxtLink>
-      <NuxtLink to="/contact" @click="close">Contact</NuxtLink>
+      <NuxtLink
+        v-for="item in navItems"
+        :key="item.to"
+        :to="item.to"
+        @click="close"
+      >
+        {{ item.label }}
+      </NuxtLink>
     </nav>
 
     <div class="mobile-nav-cta">
-      <BaseButton variant="primary" to="/contact" @click="close">
-        Book Appointment
+      <BaseButton variant="primary" :to="cta.link" @click="close">
+        {{ cta.label }}
       </BaseButton>
     </div>
   </div>
 </template>
 
 <script setup>
+import siteData from '~/../data/site.json'
+
 defineProps({
   isOpen: {
     type: Boolean,
@@ -38,6 +41,12 @@ defineProps({
 })
 
 const emit = defineEmits(['close'])
+const site = siteData
+const navItems = site.nav
+const cta = {
+  label: site.home.hero.primaryCta,
+  link: site.home.hero.primaryCtaLink
+}
 
 const close = () => {
   emit('close')

@@ -1,0 +1,69 @@
+{
+  "pageHeader": {
+    "title": "Insurance & Payment Options",
+    "breadcrumb": "Home > Insurance",
+    "subtitle": "We accept major HMO providers to make quality healthcare accessible"
+  },
+  "seo": {
+    "title": "Insurance & Payment - Unita Hospital",
+    "description": "Unita Hospital accepts Hygeia HMO, AIICO Health, Clearline HMO, and Reliance Health insurance. Learn about payment options and coverage."
+  },
+  "intro": "Unita Hospital partners with leading health maintenance organizations (HMOs) to ensure affordable, accessible healthcare for our patients. Check if your insurance provider is accepted below.",
+  "providersTitle": "Accepted Insurance Providers",
+  "paymentOptionsTitle": "Payment Options",
+  "insuranceStepsTitle": "Using Your Insurance",
+  "providers": [
+    {
+      "id": 1,
+      "name": "Hygeia HMO",
+      "logoText": "Hygeia HMO",
+      "description": "One of Nigeria's leading health insurance providers, offering comprehensive coverage."
+    },
+    {
+      "id": 2,
+      "name": "AIICO Health",
+      "logoText": "AIICO",
+      "description": "Trusted healthcare coverage with flexible plans for individuals and families."
+    },
+    {
+      "id": 3,
+      "name": "Clearline HMO",
+      "logoText": "Clearline",
+      "description": "Affordable health insurance solutions with wide provider network coverage."
+    },
+    {
+      "id": 4,
+      "name": "Reliance Health (Alafia)",
+      "logoText": "Reliance",
+      "description": "Modern health insurance with easy digital access and comprehensive benefits."
+    }
+  ],
+  "paymentOptions": [
+    {
+      "title": "Cash Payments",
+      "description": "We accept direct payment for all services"
+    },
+    {
+      "title": "HMO Coverage",
+      "description": "Present your HMO card for cashless treatment"
+    },
+    {
+      "title": "Insurance Claims",
+      "description": "We process claims directly with your provider"
+    }
+  ],
+  "insuranceSteps": [
+    "Verify your coverage with your HMO provider",
+    "Present your valid HMO card at reception",
+    "Receive treatment (subject to your plan benefits)",
+    "We handle the billing with your insurance provider"
+  ],
+  "cta": {
+    "title": "Have Questions About Insurance Coverage?",
+    "description": "Contact us to verify your insurance plan or discuss payment options",
+    "primaryLabel": "Contact Us",
+    "primaryLink": "/contact",
+    "secondaryLabel": "Call: 08036672587",
+    "secondaryLink": "tel:08036672587"
+  }
+}

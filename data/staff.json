@@ -1,0 +1,52 @@
+﻿{
+  "pageHeader": {
+    "title": "Our Medical Team",
+    "breadcrumb": "Home > Medical Team",
+    "subtitle": "Experienced healthcare professionals dedicated to your wellbeing"
+  },
+  "seo": {
+    "title": "Our Team - Unita Hospital",
+    "description": "Meet the leadership team at Unita Hospital serving the  community in Lagos."
+  },
+  "sections": {
+    "leadershipTitle": "Leadership Team"
+  },
+  "leadership": [
+    {
+      "id": 1,
+      "name": "Dr. Abdurasheed Oriloye",
+      "title": "Chief Medical Director"
+    },
+    {
+      "id": 2,
+      "name": "Alhaja Mulikat Oriloye",
+      "title": "Head of Nursing / Matron"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Mogaji",
+      "title": "Head of Administrative Services"
+    }
+  ],
+  "previewTitle": "Leadership Team",
+  "previewCtaLabel": "Meet Our Leadership",
+  "previewCtaLink": "/medical-team",
+  "preview": [
+    {
+      "id": 1,
+      "name": "Dr. Abdurasheed Oriloye",
+      "title": "Chief Medical Director"
+    },
+    {
+      "id": 2,
+      "name": "Alhaja Mulikat Oriloye",
+      "title": "Head of Nursing / Matron"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Mogaji",
+      "title": "Head of Administrative Services"
+    }
+  ],
+  "statement": "Our leadership team provides clear direction for quality care and service."
+}

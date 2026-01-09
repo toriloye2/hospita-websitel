@@ -1,40 +1,25 @@
-<template>
+﻿<template>
   <div class="homepage">
     <HeroSection
-      title="Quality Healthcare in Ikotun, Lagos"
-      subtitle="Your trusted community hospital providing comprehensive healthcare services with compassion and excellence"
-      primary-cta="Book Appointment"
-      secondary-cta="Our Services"
-      primary-cta-link="/contact"
-      secondary-cta-link="/services"
+      :title="hero.title"
+      :subtitle="hero.subtitle"
+      :primary-cta="hero.primaryCta"
+      :secondary-cta="hero.secondaryCta"
+      :primary-cta-link="hero.primaryCtaLink"
+      :secondary-cta-link="hero.secondaryCtaLink"
     />
 
     <section class="quick-info animate-fade-in">
       <div class="container">
         <div class="quick-info-grid">
           <QuickInfoCard
-            icon="📍"
-            title="Our Location"
-            description="63 Oduduwa Street, Ikotun"
-            link="/contact"
-          />
-          <QuickInfoCard
-            icon="📞"
-            title="Emergency Contact"
-            description="08036672587"
-            :is-emergency="true"
-          />
-          <QuickInfoCard
-            icon="🏥"
-            title="HMO Friendly"
-            description="We accept major insurance"
-            link="/insurance"
-          />
-          <QuickInfoCard
-            icon="⭐"
-            title="Patient Care"
-            description="Trusted by our community"
-            link="/about"
+            v-for="item in quickInfo"
+            :key="item.title"
+            :icon="item.icon"
+            :title="item.title"
+            :description="item.description"
+            :link="item.link"
+            :is-emergency="item.isEmergency"
           />
         </div>
       </div>
@@ -50,17 +35,21 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue'
+import siteData from '~/../data/site.json'
 import { useGsapAnimations } from '~/composables/useGsapAnimations'
 
 useHead({
-  title: 'Unita Hospital - Quality Healthcare in Ikotun, Lagos',
+  title: siteData.seo.home.title,
   meta: [
     {
       name: 'description',
-      content: 'Unita Hospital provides comprehensive healthcare services in Ikotun, Lagos. We accept major HMO providers and offer emergency services, maternity care, and more.'
+      content: siteData.seo.home.description
     }
   ]
 })
+
+const hero = siteData.home.hero
+const quickInfo = siteData.home.quickInfo
 
 const { initScrollAnimations, cleanupAnimations } = useGsapAnimations()
 

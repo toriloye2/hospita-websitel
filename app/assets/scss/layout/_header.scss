@@ -26,10 +26,19 @@
 
   .header-content {
     @include flex-between;
+    gap: $spacing-md;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: $spacing-lg;
+    }
   }
 
   .logo {
     @include flex-center;
+    flex-shrink: 0;
     gap: $spacing-sm;
     text-decoration: none;
     transition: transform $transition-fast;
@@ -39,6 +48,7 @@
     }
 
     img {
+      display: block;
       height: 40px;
       width: auto;
 
@@ -52,6 +62,7 @@
       font-size: $font-size-lg;
       font-weight: 700;
       color: $primary-blue;
+      white-space: nowrap;
 
       @include mobile {
         display: none;
@@ -64,7 +75,26 @@
   }
 
   .cta-button {
+    flex-shrink: 0;
+
     @include mobile {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo-text {
+      font-size: $font-size-base;
+    }
+
+    .cta-button {
+      padding: 10px 18px;
+      font-size: $font-size-sm;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .logo-text {
       display: none;
     }
   }

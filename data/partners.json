@@ -1,0 +1,84 @@
+{
+  "pageHeader": {
+    "title": "Our Healthcare Partners",
+    "breadcrumb": "Home > Partners",
+    "subtitle": "Expanding access to quality care through trusted partnerships"
+  },
+  "seo": {
+    "title": "Our Partners - Unita Hospital",
+    "description": "Unita Hospital partners with Biochem Laboratories and dental care providers to offer comprehensive healthcare services in Ikotun, Lagos."
+  },
+  "intro": "At Unita Hospital, we believe in comprehensive healthcare. We've partnered with specialized providers to ensure you receive the best possible care across all health needs.",
+  "accessLabel": "How to Access",
+  "partners": [
+    {
+      "id": 1,
+      "name": "Biochem Laboratories",
+      "logoPlaceholder": "🔬",
+      "servicesTitle": "Services Offered:",
+      "services": [
+        "Blood tests and analysis",
+        "Urinalysis",
+        "Medical screening packages",
+        "Comprehensive diagnostic testing",
+        "Fast, accurate laboratory results"
+      ],
+      "whyTitle": "Why We Partner:",
+      "whyPartner": [
+        "State-of-the-art diagnostic equipment",
+        "Experienced laboratory technicians",
+        "Rapid turnaround times",
+        "Accurate and reliable results"
+      ],
+      "access": "Request a referral from our doctors for seamless laboratory services and coordinated care."
+    },
+    {
+      "id": 2,
+      "name": "Dental Care Partner",
+      "logoPlaceholder": "🦷",
+      "servicesTitle": "Services Offered:",
+      "services": [
+        "General dentistry",
+        "Teeth cleaning and whitening",
+        "Tooth extractions",
+        "Dental consultations",
+        "Preventive dental care"
+      ],
+      "whyTitle": "Why We Partner:",
+      "whyPartner": [
+        "Experienced dental professionals",
+        "Modern dental equipment and facilities",
+        "Patient-friendly environment",
+        "Comprehensive dental care"
+      ],
+      "access": "Get referrals from Unita Hospital for coordinated dental care and seamless service."
+    }
+  ],
+  "benefitsTitle": "Benefits of Our Partnerships",
+  "benefits": [
+    {
+      "id": 1,
+      "icon": "🤝",
+      "title": "One-Stop Healthcare",
+      "description": "Access multiple healthcare services through coordinated care"
+    },
+    {
+      "id": 2,
+      "icon": "📋",
+      "title": "Seamless Referrals",
+      "description": "Easy transitions between services with proper medical coordination"
+    },
+    {
+      "id": 3,
+      "icon": "✅",
+      "title": "Trusted Quality",
+      "description": "All partners vetted for excellence and professional standards"
+    },
+    {
+      "id": 4,
+      "icon": "🏥",
+      "title": "Specialized Care",
+      "description": "Access to expert services beyond general hospital capabilities"
+    }
+  ]
+}

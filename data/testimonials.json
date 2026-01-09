@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Patient A.",
+      "quote": "The doctors and nurses were attentive and kind. I felt supported throughout my visit.",
+      "location": "Ikotun"
+    },
+    {
+      "id": 2,
+      "name": "Patient B.",
+      "quote": "Clean facility, friendly staff, and quick service. Highly recommended.",
+      "location": "Lagos"
+    }
+  ]
+}
