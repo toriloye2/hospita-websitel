@@ -1,0 +1,85 @@
+// ===========================================
+// TYPOGRAPHY
+// ===========================================
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-sm;
+  line-height: 1.6;
+  color: $gray-900;
+
+  @include desktop {
+    font-size: $font-size-base;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $gray-900;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: $font-size-2xl;
+
+  @include desktop {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-xl;
+
+  @include desktop {
+    font-size: $font-size-3xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-lg;
+
+  @include desktop {
+    font-size: $font-size-2xl;
+  }
+}
+
+h4 {
+  font-size: $font-size-base;
+
+  @include desktop {
+    font-size: $font-size-xl;
+  }
+}
+
+p {
+  margin-bottom: $spacing-sm;
+  line-height: 1.7;
+}
+
+a {
+  color: $primary-blue;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: darken($primary-blue, 10%);
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: $gray-600;
+}

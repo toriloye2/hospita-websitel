@@ -1,0 +1,131 @@
+// ===========================================
+// CONTACT PAGE
+// ===========================================
+
+.contact-page {
+  .contact-content {
+    .contact-grid {
+      @include grid-2-col;
+      gap: $spacing-3xl;
+      align-items: start;
+    }
+
+    .contact-form-wrapper {
+      h2 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-md;
+      }
+    }
+
+    .contact-info-wrapper {
+      h2 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-lg;
+      }
+
+      .info-section {
+        display: flex;
+        gap: $spacing-md;
+        margin-bottom: $spacing-lg;
+
+        .info-icon {
+          font-size: 28px;
+          flex-shrink: 0;
+        }
+
+        .info-content {
+          h3 {
+            font-size: $font-size-lg;
+            margin-bottom: $spacing-xs;
+          }
+
+          p {
+            color: $gray-600;
+            font-size: $font-size-sm;
+            line-height: 1.7;
+
+            a {
+              color: $primary-blue;
+              font-weight: 600;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
+            strong {
+              color: $gray-900;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .emergency-notice {
+    background: $gray-50;
+
+    .emergency-box {
+      @include flex-center;
+      gap: $spacing-lg;
+      max-width: 800px;
+      margin: 0 auto;
+      background: lighten($emergency-red, 45%);
+      padding: $spacing-xl;
+      border-radius: $radius-lg;
+      border: 2px solid $emergency-red;
+      flex-direction: column;
+
+      @include desktop {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .emergency-icon {
+        font-size: 64px;
+        flex-shrink: 0;
+      }
+
+      .emergency-content {
+        flex: 1;
+        text-align: center;
+
+        @include desktop {
+          text-align: left;
+        }
+
+        h2 {
+          font-size: $font-size-2xl;
+          color: $emergency-red;
+          margin-bottom: $spacing-sm;
+        }
+
+        p {
+          color: $gray-700;
+          margin-bottom: $spacing-md;
+        }
+      }
+    }
+  }
+
+  .map-section {
+    background: $gray-50;
+
+    h2 {
+      @include section-heading;
+    }
+
+    .map-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: $radius-lg;
+      overflow: hidden;
+      box-shadow: $shadow-lg;
+
+      iframe {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

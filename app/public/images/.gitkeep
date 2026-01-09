@@ -1,0 +1,8 @@
+# This file ensures the images directory is tracked by git
+# Replace placeholder images with actual hospital photos:
+# - logo.png: Hospital logo
+# - hero/: Hero section background images
+# - doctors/: Doctor and staff photos
+# - services/: Service-related images
+# - partners/: Partner and HMO logos
+# - hmo/: Insurance provider logos

@@ -1,0 +1,153 @@
+// ===========================================
+// FOOTER
+// ===========================================
+
+.site-footer {
+  background: $gray-900;
+  color: $white;
+  padding: $spacing-2xl 0 $spacing-md;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .footer-column {
+    h3 {
+      color: $white;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .footer-logo {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-md;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+
+    span {
+      font-family: $font-heading;
+      font-size: $font-size-xl;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+
+  .footer-tagline {
+    font-weight: 600;
+    color: $light-blue;
+    margin-bottom: $spacing-sm;
+  }
+
+  .footer-description {
+    color: $gray-100;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: $spacing-sm;
+
+      a {
+        color: $gray-100;
+        font-size: $font-size-sm;
+        transition: color $transition-fast;
+
+        &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    p {
+      color: $gray-100;
+      font-size: $font-size-sm;
+      line-height: 1.6;
+      margin-bottom: $spacing-md;
+
+      strong {
+        color: $white;
+        display: block;
+        margin-bottom: $spacing-xs;
+      }
+
+      a {
+        color: $light-blue;
+        transition: color $transition-fast;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .hmo-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+
+    .hmo-logo {
+      background: $gray-600;
+      padding: $spacing-xs $spacing-sm;
+      border-radius: $radius-base;
+      font-size: $font-size-xs;
+      color: $white;
+      font-weight: 600;
+    }
+  }
+
+  .footer-bottom {
+    @include flex-between;
+    padding-top: $spacing-md;
+    border-top: 1px solid $gray-600;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    .copyright {
+      color: $gray-100;
+      font-size: $font-size-sm;
+      margin: 0;
+    }
+
+    .social-links {
+      display: flex;
+      gap: $spacing-md;
+
+      a {
+        font-size: $font-size-xl;
+        transition: transform $transition-fast;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

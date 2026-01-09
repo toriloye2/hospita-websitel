@@ -1,0 +1,291 @@
+// ===========================================
+// UNITA HOSPITAL - MAIN STYLESHEET
+// ===========================================
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/navigation';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+
+// Pages
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/services';
+@import 'pages/medical-team';
+@import 'pages/partners';
+@import 'pages/insurance';
+@import 'pages/contact';
+
+// Shared Components
+// Hero Section
+.hero-section {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  overflow: hidden;
+
+  @include desktop {
+    min-height: 500px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba($gray-900, 0.6);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: $spacing-xl $spacing-md;
+
+    h1 {
+      color: $white;
+      font-size: $font-size-2xl;
+      margin-bottom: $spacing-md;
+
+      @include desktop {
+        font-size: $font-size-4xl;
+      }
+    }
+
+    p {
+      font-size: $font-size-base;
+      margin-bottom: $spacing-lg;
+
+      @include desktop {
+        font-size: $font-size-lg;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: $spacing-md;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Page Header
+.page-header {
+  background: linear-gradient(135deg, $primary-blue, darken($primary-blue, 15%));
+  color: $white;
+  padding: $spacing-xl 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  @include desktop {
+    padding: $spacing-2xl 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .page-header-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    color: $white;
+    margin-bottom: $spacing-sm;
+  }
+
+  .breadcrumb {
+    color: $light-blue;
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-xs;
+  }
+
+  .subtitle {
+    color: $light-blue;
+    font-size: $font-size-base;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Section Styles
+.services-overview {
+  background: $white;
+
+  h2 {
+    @include section-heading;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .view-all-button {
+    text-align: center;
+  }
+}
+
+.why-choose-us {
+  background: $gray-50;
+
+  h2 {
+    @include section-heading;
+  }
+
+  .features-grid {
+    @include grid-4-col;
+  }
+}
+
+.doctors-preview {
+  background: $white;
+
+  h2 {
+    @include section-heading;
+  }
+
+  .doctors-grid {
+    @include grid-3-col;
+    margin-bottom: $spacing-lg;
+  }
+
+  .view-team-button {
+    text-align: center;
+  }
+}
+
+// Mobile Navigation
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $white;
+  z-index: $z-modal;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-xl $spacing-md;
+  transform: translateX(-100%);
+  transition: transform $transition-base;
+
+  @include desktop {
+    display: none;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-header {
+    @include flex-between;
+    margin-bottom: $spacing-xl;
+
+    .logo {
+      @include flex-center;
+      gap: $spacing-sm;
+
+      img {
+        height: 40px;
+      }
+
+      span {
+        font-family: $font-heading;
+        font-size: $font-size-lg;
+        font-weight: 700;
+        color: $primary-blue;
+      }
+    }
+
+    .close-button {
+      @include button-reset;
+      font-size: $font-size-3xl;
+      color: $gray-900;
+    }
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    a {
+      color: $gray-900;
+      font-size: $font-size-lg;
+      font-weight: 600;
+      padding: $spacing-sm 0;
+      border-bottom: 1px solid $gray-100;
+      transition: color $transition-fast;
+
+      &:hover,
+      &.router-link-active {
+        color: $primary-blue;
+      }
+    }
+  }
+
+  .mobile-nav-cta {
+    margin-top: auto;
+    padding-top: $spacing-lg;
+  }
+}
+
+// Animations
+.animate-fade-in {
+  opacity: 1;
+}
+
+.stagger-cards {
+  .card {
+    opacity: 1;
+  }
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,160 @@
+// ===========================================
+// ABOUT PAGE
+// ===========================================
+
+.about-page {
+  .our-story {
+    .story-content {
+      max-width: 800px;
+      margin: 0 auto $spacing-xl;
+      text-align: center;
+
+      p {
+        font-size: $font-size-base;
+        line-height: 1.8;
+        color: $gray-600;
+        margin-bottom: $spacing-md;
+      }
+    }
+
+    .mission-vision {
+      @include grid-2-col;
+      margin-top: $spacing-xl;
+
+      .mission,
+      .vision {
+        background: $light-blue;
+        padding: $spacing-lg;
+        border-radius: $radius-lg;
+        text-align: center;
+
+        h3 {
+          color: $primary-blue;
+          margin-bottom: $spacing-sm;
+        }
+
+        p {
+          color: $gray-600;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+
+  .leadership-team {
+    background: $gray-50;
+
+    h2 {
+      @include section-heading;
+    }
+
+    .medical-director-card,
+    .matron-card {
+      max-width: 900px;
+      margin: 0 auto $spacing-xl;
+    }
+  }
+
+  .management-team {
+    .management-grid {
+      @include grid-2-col;
+      max-width: 800px;
+      margin: 0 auto;
+
+      .team-member {
+        text-align: center;
+
+        .photo-placeholder {
+          width: 150px;
+          height: 150px;
+          background: $gray-100;
+          border-radius: 50%;
+          margin: 0 auto $spacing-md;
+        }
+
+        h3 {
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-xs;
+        }
+
+        .role {
+          color: $primary-blue;
+          font-weight: 600;
+          margin-bottom: $spacing-sm;
+        }
+
+        .description {
+          color: $gray-600;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+
+  .facilities {
+    background: $gray-50;
+
+    h2 {
+      @include section-heading;
+    }
+
+    .facilities-grid {
+      @include grid-3-col;
+      margin-bottom: $spacing-xl;
+
+      .facility-item {
+        text-align: center;
+        padding: $spacing-md;
+
+        .icon {
+          font-size: 48px;
+          margin-bottom: $spacing-sm;
+        }
+
+        h3 {
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-sm;
+        }
+
+        p {
+          color: $gray-600;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    .photo-gallery {
+      .gallery-placeholder {
+        background: $gray-100;
+        padding: $spacing-3xl;
+        border-radius: $radius-lg;
+        text-align: center;
+        color: $gray-600;
+        font-size: $font-size-lg;
+        border: 2px dashed $gray-600;
+      }
+    }
+  }
+
+  .commitment {
+    .commitment-box {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background: $primary-blue;
+      color: $white;
+      padding: $spacing-xl;
+      border-radius: $radius-lg;
+
+      h2 {
+        color: $white;
+        margin-bottom: $spacing-md;
+      }
+
+      p {
+        font-size: $font-size-base;
+        line-height: 1.8;
+      }
+    }
+  }
+}

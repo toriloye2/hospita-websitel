@@ -1,0 +1,61 @@
+// ===========================================
+// PARTNERS PAGE
+// ===========================================
+
+.partners-page {
+  .intro {
+    background: $gray-50;
+
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: $font-size-lg;
+      line-height: 1.8;
+      color: $gray-600;
+    }
+  }
+
+  .partners-list {
+    .partners-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-xl;
+
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .benefits {
+    background: $gray-50;
+
+    h2 {
+      @include section-heading;
+    }
+
+    .benefits-grid {
+      @include grid-4-col;
+
+      .benefit-item {
+        text-align: center;
+
+        .icon {
+          font-size: 48px;
+          margin-bottom: $spacing-sm;
+        }
+
+        h3 {
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-sm;
+        }
+
+        p {
+          color: $gray-600;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}

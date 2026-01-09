@@ -1,0 +1,17 @@
+// ===========================================
+// HOME PAGE
+// ===========================================
+
+.homepage {
+  .quick-info {
+    background: $gray-50;
+
+    .quick-info-grid {
+      @include grid-4-col;
+    }
+  }
+
+  .testimonials {
+    background: $light-blue;
+  }
+}

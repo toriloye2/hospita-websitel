@@ -1,0 +1,49 @@
+// ===========================================
+// MEDICAL TEAM PAGE
+// ===========================================
+
+.medical-team-page {
+  .medical-director {
+    h2 {
+      @include section-heading;
+    }
+  }
+
+  .medical-staff {
+    background: $gray-50;
+
+    h2 {
+      @include section-heading;
+    }
+
+    .doctors-grid {
+      @include grid-3-col;
+    }
+  }
+
+  .nursing-team {
+    h2 {
+      @include section-heading;
+    }
+
+    .nursing-grid {
+      @include grid-3-col;
+    }
+  }
+
+  .team-statement {
+    background: $light-blue;
+
+    .statement-box {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        font-size: $font-size-lg;
+        line-height: 1.8;
+        color: $gray-700;
+      }
+    }
+  }
+}

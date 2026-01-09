@@ -1,0 +1,15 @@
+// ===========================================
+// GRID UTILITIES
+// ===========================================
+
+.grid-2 {
+  @include grid-2-col;
+}
+
+.grid-3 {
+  @include grid-3-col;
+}
+
+.grid-4 {
+  @include grid-4-col;
+}

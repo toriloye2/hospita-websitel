@@ -1,0 +1,71 @@
+// ===========================================
+// HEADER
+// ===========================================
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  background: $white;
+  box-shadow: $shadow-sm;
+  transition: all $transition-base;
+
+  &.is-scrolled {
+    box-shadow: $shadow-base;
+  }
+
+  .container {
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+
+    @include desktop {
+      padding-top: $spacing-md;
+      padding-bottom: $spacing-md;
+    }
+  }
+
+  .header-content {
+    @include flex-between;
+  }
+
+  .logo {
+    @include flex-center;
+    gap: $spacing-sm;
+    text-decoration: none;
+    transition: transform $transition-fast;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    img {
+      height: 40px;
+      width: auto;
+
+      @include desktop {
+        height: 50px;
+      }
+    }
+
+    .logo-text {
+      font-family: $font-heading;
+      font-size: $font-size-lg;
+      font-weight: 700;
+      color: $primary-blue;
+
+      @include mobile {
+        display: none;
+      }
+
+      @include tablet {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  .cta-button {
+    @include mobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+// ===========================================
+// BUTTONS
+// ===========================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  padding: 12px 24px;
+  border-radius: $radius-base;
+  font-family: $font-body;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  white-space: nowrap;
+
+  @include desktop {
+    padding: 14px 28px;
+    font-size: $font-size-base;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // Primary variant
+  &--primary {
+    background: $primary-blue;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      background: darken($primary-blue, 10%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-base;
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  // Secondary variant
+  &--secondary {
+    background: transparent;
+    color: $primary-blue;
+    border: 2px solid $primary-blue;
+
+    &:hover:not(:disabled) {
+      background: $light-blue;
+      transform: translateY(-2px);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  // Emergency variant
+  &--emergency {
+    background: $emergency-red;
+    color: $white;
+    animation: pulse 2s infinite;
+
+    &:hover:not(:disabled) {
+      background: darken($emergency-red, 10%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg;
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  // Ghost variant
+  &--ghost {
+    background: transparent;
+    color: $gray-900;
+
+    &:hover:not(:disabled) {
+      background: $gray-100;
+    }
+  }
+
+  // Icon button
+  &--icon {
+    padding: 12px;
+    aspect-ratio: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba($emergency-red, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba($emergency-red, 0);
+  }
+}

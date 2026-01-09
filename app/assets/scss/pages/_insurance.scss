@@ -1,0 +1,128 @@
+// ===========================================
+// INSURANCE PAGE
+// ===========================================
+
+.insurance-page {
+  .intro {
+    background: $gray-50;
+
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: $font-size-lg;
+      line-height: 1.8;
+      color: $gray-600;
+    }
+  }
+
+  .hmo-partners {
+    h2 {
+      @include section-heading;
+    }
+
+    .hmo-grid {
+      @include grid-4-col;
+
+      .hmo-card {
+        text-align: center;
+        padding: $spacing-lg;
+
+        .hmo-logo-placeholder {
+          @include flex-center;
+          height: 120px;
+          background: $gray-100;
+          border-radius: $radius-base;
+          margin-bottom: $spacing-md;
+          font-weight: 700;
+          font-size: $font-size-lg;
+          color: $primary-blue;
+        }
+
+        h3 {
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-sm;
+        }
+
+        p {
+          color: $gray-600;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+
+  .payment-info {
+    background: $gray-50;
+
+    .payment-sections {
+      @include grid-2-col;
+      max-width: 900px;
+      margin: 0 auto;
+
+      .payment-section {
+        background: $white;
+        padding: $spacing-lg;
+        border-radius: $radius-lg;
+
+        h2 {
+          font-size: $font-size-xl;
+          margin-bottom: $spacing-md;
+        }
+
+        ul,
+        ol {
+          list-style-position: inside;
+          padding-left: 0;
+
+          li {
+            color: $gray-600;
+            margin-bottom: $spacing-sm;
+            line-height: 1.6;
+
+            strong {
+              color: $gray-900;
+            }
+          }
+        }
+
+        ul {
+          list-style-type: disc;
+        }
+
+        ol {
+          list-style-type: decimal;
+        }
+      }
+    }
+  }
+
+  .insurance-cta {
+    .cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      background: $light-blue;
+      padding: $spacing-xl;
+      border-radius: $radius-lg;
+
+      h2 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        font-size: $font-size-base;
+        color: $gray-600;
+        margin-bottom: $spacing-md;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: $spacing-md;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

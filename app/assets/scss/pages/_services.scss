@@ -1,0 +1,75 @@
+// ===========================================
+// SERVICES PAGE
+// ===========================================
+
+.services-page {
+  .services-grid {
+    .services-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $spacing-lg;
+      }
+    }
+  }
+
+  .extended-services {
+    background: $gray-50;
+
+    .extended-callout {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        @include section-heading;
+      }
+
+      > p {
+        color: $gray-600;
+        font-size: $font-size-base;
+        margin-bottom: $spacing-xl;
+      }
+
+      .partner-services {
+        @include grid-2-col;
+        text-align: left;
+
+        .partner-service {
+          background: $white;
+          padding: $spacing-lg;
+          border-radius: $radius-lg;
+          box-shadow: $shadow-base;
+
+          h3 {
+            font-size: $font-size-xl;
+            margin-bottom: $spacing-sm;
+            color: $gray-900;
+          }
+
+          p {
+            color: $gray-600;
+            margin-bottom: $spacing-md;
+          }
+
+          .learn-more {
+            color: $primary-blue;
+            font-weight: 600;
+            transition: color $transition-fast;
+
+            &:hover {
+              color: darken($primary-blue, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
