@@ -68,7 +68,7 @@ const props = defineProps({
 })
 
 const defaultHeadlines = [
-  'Trusted Community Healthcare in Ikotun, Lagos',
+  'Trusted Community Healthcare in Lagos',
   'Compassionate Care for Individuals and Families',
   'Quality Healthcare Led by Experienced Professionals'
 ]
