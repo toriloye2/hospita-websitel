@@ -97,7 +97,7 @@ onMounted(() => {
     gsap.to(headlineEl.value, {
       opacity: 0,
       y: -12,
-      duration: 1,
+      duration: 2.5,
       onComplete: () => {
         currentIndex.value = (currentIndex.value + 1) % rotationHeadlines.value.length
 
