@@ -24,7 +24,7 @@ This will install:
 npm run dev
 ```
 
-The website will start at: **http://localhost:3000**
+The website will start at: **http://localhost:8000**
 
 Open this URL in your browser to see the website!
 
@@ -41,7 +41,7 @@ Try editing:
 
 While dev server is running:
 1. Find your computer's IP address
-2. Open `http://YOUR-IP:3000` on your phone
+2. Open `http://YOUR-IP:8000` on your phone
 3. Make sure phone and computer are on same WiFi
 
 Or use browser DevTools:
@@ -79,9 +79,9 @@ npm run preview
 ### Error: "Cannot find module..."
 **Solution:** Delete `node_modules` folder and run `npm install` again
 
-### Port 3000 already in use
+### Port 8000 already in use
 **Solution:** Either:
-- Close other apps using port 3000, or
+- Close other apps using port 8000, or
 - Run: `npm run dev -- --port 3001` (uses port 3001 instead)
 
 ### Changes not showing up

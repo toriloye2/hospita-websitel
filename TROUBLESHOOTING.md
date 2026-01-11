@@ -38,9 +38,9 @@ Common issues and solutions for the Unita Hospital website.
 npm install gsap
 ```
 
-### Error: "Port 3000 is already in use"
+### Error: "Port 8000 is already in use"
 
-**Cause:** Another app is using port 3000
+**Cause:** Another app is using port 8000
 
 **Solution:**
 - Kill the other process, or

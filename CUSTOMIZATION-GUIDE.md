@@ -146,7 +146,7 @@ After making changes:
 ```bash
 npm run dev
 ```
-Visit http://localhost:3000 to preview changes
+Visit http://localhost:8000 to preview changes
 
 ### Deploy to Production
 ```bash
