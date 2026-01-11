@@ -1,15 +1,29 @@
 <template>
-  <component
-    :is="tag"
+  <NuxtLink
+    v-if="to"
     :to="to"
+    :class="buttonClasses"
+    v-bind="$attrs"
+  >
+    <slot />
+  </NuxtLink>
+  <a
+    v-else-if="href"
     :href="href"
+    :class="buttonClasses"
+    v-bind="$attrs"
+  >
+    <slot />
+  </a>
+  <button
+    v-else
     :type="type"
     :disabled="disabled"
     :class="buttonClasses"
     v-bind="$attrs"
   >
     <slot />
-  </component>
+  </button>
 </template>
 
 <script setup>
@@ -41,12 +55,6 @@ const props = defineProps({
     type: Boolean,
     default: false
   }
-})
-
-const tag = computed(() => {
-  if (props.to) return 'NuxtLink'
-  if (props.href) return 'a'
-  return 'button'
 })
 
 const buttonClasses = computed(() => [

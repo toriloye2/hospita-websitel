@@ -27,7 +27,7 @@
       </div>
     </section>
 
-    <section class="management-team animate-fade-in">
+    <section class="management-team animate-fade-in" id="leadership">
       <div class="container">
         <h2>{{ about.titles.leadership }}</h2>
         <div class="management-grid">

@@ -14,4 +14,28 @@
   .testimonials {
     background: $light-blue;
   }
+
+  .team-cta {
+    background: $white;
+
+    .team-cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      background: $light-blue;
+      padding: $spacing-xl;
+      border-radius: $radius-lg;
+
+      h2 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        font-size: $font-size-base;
+        color: $gray-600;
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
 }
