@@ -5,10 +5,10 @@
     "subtitle": "We accept major HMO providers to make quality healthcare accessible"
   },
   "seo": {
-    "title": "Insurance & Payment - Unita Hospital",
-    "description": "Unita Hospital accepts Hygeia HMO, AIICO Health, Clearline HMO, and Reliance Health insurance. Learn about payment options and coverage."
+    "title": "Insurance & Payment - Bluecare Dental Clinic",
+    "description": "Bluecare Dental Clinic accepts Hygeia HMO, AIICO Health, Clearline HMO, and Reliance Health insurance. Learn about payment options and coverage."
   },
-  "intro": "Unita Hospital partners with leading health maintenance organizations (HMOs) to ensure affordable, accessible healthcare for our patients. Check if your insurance provider is accepted below.",
+  "intro": "Bluecare Dental Clinic partners with leading health maintenance organizations (HMOs) to ensure affordable, accessible healthcare for our patients. Check if your insurance provider is accepted below.",
   "providersTitle": "Accepted Insurance Providers",
   "paymentOptionsTitle": "Payment Options",
   "insuranceStepsTitle": "Using Your Insurance",
@@ -17,25 +17,29 @@
       "id": 1,
       "name": "Hygeia HMO",
       "logoText": "Hygeia HMO",
-      "description": "One of Nigeria's leading health insurance providers, offering comprehensive coverage."
+      "website": "https://www.hygeia.com.ng/",
+      "description": "A major HMO in Nigeria offering comprehensive healthcare coverage plans."
     },
     {
       "id": 2,
       "name": "AIICO Health",
-      "logoText": "AIICO",
-      "description": "Trusted healthcare coverage with flexible plans for individuals and families."
+      "logoText": "AIICO Health",
+      "website": "https://www.aiicoplc.com/health/",
+      "description": "Health insurance plans from AIICO Insurance, including Hospital Cash options."
     },
     {
       "id": 3,
       "name": "Clearline HMO",
       "logoText": "Clearline",
-      "description": "Affordable health insurance solutions with wide provider network coverage."
+      "website": "https://clearlinehmo.com/",
+      "description": "Affordable insurance coverage through Clearline HMO."
     },
     {
       "id": 4,
-      "name": "Reliance Health (Alafia)",
-      "logoText": "Reliance",
-      "description": "Modern health insurance with easy digital access and comprehensive benefits."
+      "name": "Reliance Health",
+      "logoText": "Reliance Health",
+      "website": "https://reliancehealth.com/",
+      "description": "Modern health insurance with digital access and comprehensive benefits."
     }
   ],
   "paymentOptions": [

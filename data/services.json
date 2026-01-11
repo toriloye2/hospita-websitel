@@ -62,9 +62,9 @@
     {
       "id": 7,
       "icon": "⚕️",
-      "title": "Minor Surgery",
+      "title": "Minor & Major Surgery",
       "shortDescription": "Safe, professional minor surgical procedures",
-      "description": "Safe, professional minor surgical procedures in a sterile environment with experienced medical staff.",
+      "description": "Safe and professional surgical procedures in a sterile environment with experienced medical staff.",
       "featured": true
     },
     {
@@ -99,7 +99,7 @@
     {
       "id": 12,
       "icon": "👨‍👩‍👧‍👦",
-      "title": "Family Planning",
+      "title": "Family Planning & Contraception",
       "description": "Counseling and services for family planning decisions. Professional guidance on reproductive health.",
       "featured": false
     }

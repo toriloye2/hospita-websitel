@@ -10,9 +10,22 @@
           <p class="footer-tagline">
             {{ site.tagline }}
           </p>
-          <p class="footer-description">
-            {{ site.description }}
-          </p>
+          <div class="contact-info footer-contact">
+            <p>
+              <strong>Phone:</strong><br>
+              <template v-for="(phone, index) in site.contact.phones" :key="phone">
+                <a :href="`tel:${phone}`">{{ phone }}</a><br v-if="index < site.contact.phones.length - 1" />
+              </template>
+            </p>
+            <p>
+              <strong>Email:</strong><br>
+              <a :href="`mailto:${site.contact.email}`">{{ site.contact.email }}</a>
+            </p>
+            <p>
+              <strong>Hours:</strong><br>
+              {{ site.hours.label }}
+            </p>
+          </div>
         </div>
 
         <div class="footer-column">
@@ -33,29 +46,22 @@
                 {{ line }}<br v-if="index < site.address.lines.length - 1" />
               </template>
             </p>
-            <p>
-              <strong>Phone:</strong><br>
-              <template v-for="(phone, index) in site.contact.phones" :key="phone">
-                <a :href="`tel:${phone}`">{{ phone }}</a><br v-if="index < site.contact.phones.length - 1" />
-              </template>
-            </p>
-            <p>
-              <strong>Email:</strong><br>
-              <a :href="`mailto:${site.contact.email}`">{{ site.contact.email }}</a>
-            </p>
-            <p>
-              <strong>Hours:</strong><br>
-              {{ site.hours.label }}
-            </p>
           </div>
         </div>
 
         <div class="footer-column">
           <h3>Insurance Partners</h3>
           <div class="hmo-logos">
-            <div v-for="provider in providers" :key="provider.id" class="hmo-logo">
+            <a
+              v-for="provider in providers"
+              :key="provider.id"
+              class="hmo-logo"
+              :href="provider.website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {{ provider.name }}
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -95,7 +101,7 @@
 <script setup>
 import insuranceData from '~/../data/insurance.json'
 import siteData from '~/../data/site.json'
-import logoUrl from '~/assets/images/unitalogo.jpeg'
+import logoUrl from '~/assets/images/unitalogo.png'
 
 const site = siteData
 const navItems = site.nav

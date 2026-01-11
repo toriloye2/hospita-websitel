@@ -32,7 +32,7 @@
 
 <script setup>
 import siteData from '~/../data/site.json'
-import logoUrl from '~/assets/images/unitalogo.jpeg'
+import logoUrl from '~/assets/images/unitalogo.png'
 
 defineProps({
   isOpen: {

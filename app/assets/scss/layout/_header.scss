@@ -49,11 +49,11 @@
 
     img {
       display: block;
-      height: 40px;
+      height: 56px;
       width: auto;
 
       @include desktop {
-        height: 50px;
+        height: 64px;
       }
     }
 

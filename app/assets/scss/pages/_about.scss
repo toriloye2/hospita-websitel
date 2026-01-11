@@ -4,6 +4,10 @@
 
 .about-page {
   .our-story {
+    h2 {
+      @include section-heading;
+    }
+
     .story-content {
       max-width: 800px;
       margin: 0 auto $spacing-xl;
@@ -56,6 +60,10 @@
   }
 
   .management-team {
+    h2 {
+      @include section-heading;
+    }
+
     .management-grid {
       @include grid-2-col;
       max-width: 800px;
@@ -63,6 +71,10 @@
 
       .team-member {
         text-align: center;
+
+        &:last-child {
+          grid-column: 1 / -1;
+        }
 
         .photo-placeholder {
           width: 150px;

@@ -46,7 +46,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import siteData from '~/../data/site.json'
-import logoUrl from '~/assets/images/unitalogo.jpeg'
+import logoUrl from '~/assets/images/unitalogo.png'
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)

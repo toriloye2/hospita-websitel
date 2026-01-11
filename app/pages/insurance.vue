@@ -19,10 +19,17 @@
         <h2>{{ providersTitle }}</h2>
         <div class="stagger-cards hmo-grid">
           <div v-for="provider in providers" :key="provider.id" class="hmo-card card">
-            <div class="hmo-logo-placeholder">
-              <span>{{ provider.logoText }}</span>
-            </div>
-            <h3>{{ provider.name }}</h3>
+            <a
+              class="hmo-card-link"
+              :href="provider.website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="hmo-logo-placeholder">
+                <span>{{ provider.logoText }}</span>
+              </div>
+              <h3>{{ provider.name }}</h3>
+            </a>
             <p>{{ provider.description }}</p>
           </div>
         </div>
