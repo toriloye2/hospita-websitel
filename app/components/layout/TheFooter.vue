@@ -4,7 +4,7 @@
       <div class="footer-content">
         <div class="footer-column">
           <div class="footer-logo">
-            <img src="/images/logo.png" alt="" aria-hidden="true" />
+            <img :src="logoUrl" alt="" aria-hidden="true" />
             <span>{{ site.name }}</span>
           </div>
           <p class="footer-tagline">
@@ -95,6 +95,7 @@
 <script setup>
 import insuranceData from '~/../data/insurance.json'
 import siteData from '~/../data/site.json'
+import logoUrl from '~/assets/images/unitalogo.jpeg'
 
 const site = siteData
 const navItems = site.nav

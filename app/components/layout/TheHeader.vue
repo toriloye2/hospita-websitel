@@ -4,7 +4,7 @@
       <div class="header-content">
         <!-- Logo -->
         <NuxtLink to="/" class="logo" :aria-label="site.name">
-          <img src="/images/logo.png" alt="" aria-hidden="true" />
+          <img :src="logoUrl" alt="" aria-hidden="true" />
           <span class="logo-text">{{ site.name }}</span>
         </NuxtLink>
 
@@ -46,6 +46,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import siteData from '~/../data/site.json'
+import logoUrl from '~/assets/images/unitalogo.jpeg'
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)

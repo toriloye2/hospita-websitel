@@ -2,7 +2,7 @@
   <div class="mobile-nav" :class="{ 'is-open': isOpen }">
     <div class="mobile-nav-header">
       <NuxtLink to="/" class="logo" :aria-label="site.name" @click="close">
-        <img src="/images/logo.png" alt="" aria-hidden="true" />
+        <img :src="logoUrl" alt="" aria-hidden="true" />
         <span>{{ site.name }}</span>
       </NuxtLink>
 
@@ -32,6 +32,7 @@
 
 <script setup>
 import siteData from '~/../data/site.json'
+import logoUrl from '~/assets/images/unitalogo.jpeg'
 
 defineProps({
   isOpen: {
